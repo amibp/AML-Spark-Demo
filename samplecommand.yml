@@ -1,0 +1,12 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
+code:
+  local_path: /home/azureuser/cloudfiles/code
+command: python Users/amipatel/image-classification-mnist-data/tf_mnist.py 
+# invoke completions (Ctrl+Space, Cmd+Space) to see the list of environments available
+environment:
+  docker:
+    image: docker.io/python
+compute:
+  # invoke completions (Ctrl+Space, Cmd+Space) to see the list of computes available
+  target: azureml:goazurego
+# This defines the input datasets to mount. The names of the items in inputs can be referenced in the command
